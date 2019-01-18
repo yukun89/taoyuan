@@ -1,0 +1,483 @@
+/*
+Theme Name: Adonis
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# Normalize
+# Typography
+# Forms
+# Navigation
+	## Menus
+	## Content Navigation
+# Accessibility
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Modules
+    ## Testimonial Section & Clients Section
+	## Stat Section & Contact Section
+# Media Queries
+	## >= 640px
+	## >= 1024px
+	## >= 1366px
+	## >= 1600px
+# Colors	
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/ 
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: auto;
+	margin-left: 0.4375em;
+}
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+blockquote {
+	padding: 0 55px 0 0;
+}
+
+blockquote:before {
+	float: right;
+	right: -55px;
+	left: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+ul,
+ol {
+	margin: 0 1.5em 1.75em 0;
+}
+
+caption,
+th,
+td {
+	text-align: right;
+}
+
+.menu-toggle .icon,
+.entry-meta .icon {
+    margin-right: 0;
+    margin-left: 7px;
+}
+
+#social-search-toggle .icon {
+    margin-left: 0;
+}
+
+.drop-cap:first-letter {
+	float: right;
+  	margin: 10px -3px -3px 14px;
+}
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+input[type="search"].search-field {
+	padding: 10px 14px 10px 45px;
+}
+
+.search-submit {
+	border-left: none;
+	border-right: 1px solid;
+	left: 0;
+	right: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+	right: 20px;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: auto;
+	right: 100%;
+}
+
+.main-navigation li.menu-item-has-children ul a {
+	padding: 15px 40px 15px 50px;
+}
+
+.main-navigation li.menu-item-has-children ul ul a {
+	padding-left: auto;
+	padding-right: 50px;
+}
+
+#primary-menu-wrapper {
+	float: right;
+}
+
+#social-search-wrapper {
+	float: left;
+}
+
+.menu-inside-wrapper {
+	left: 0;
+	right: auto;
+}
+
+/* Dropdown Toggle */
+.dropdown-toggle {
+	left: 0;
+	right: auto;
+}
+
+#social-search-wrapper > .social-navigation {
+	float: right;
+}
+
+#social-search-wrapper > .social-navigation .menu-social-container {
+	padding: 18px 18px 20px 0;
+}
+
+#social-search-wrapper .menu-toggle-wrapper {
+	float: right;
+}
+
+
+/*--------------------------------------------------------------
+## Content Navigation
+--------------------------------------------------------------*/
+
+.pagination .prev {
+	float: right;
+}
+
+.pagination .next {
+	float: left;
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+.screen-reader-text:focus {
+    left: auto;
+    right: 5px;
+}
+
+.site .skip-link:focus {
+	left: auto;
+	right: 6px;
+}
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget ul,
+.widget ol {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+/* Categories widget */
+.widget_categories ul,
+.widget_archive ul {
+	text-align: left;
+}
+
+.widget_categories ul a,
+.widget_archive ul a {
+	float: right;
+}
+
+/* Tag Cloud widget */
+.tagcloud a {
+	margin: 0 0 0.4375em 0.1875em;
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.author-avatar .avatar {
+	float: right;
+	margin-right: 0;
+	margin-left: 1.75em;
+}
+
+.page-links a,
+.page-links > span {
+	margin-right: auto;
+	margin-left: 0.3076923077em;
+}
+
+.page-links > .page-links-title {
+	padding-right: 0;
+	padding-left: 0.6153846154em;
+}
+
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comment-list .children > li {
+	padding-right: 0.875em;
+	padding-left: 0;
+}
+
+.comment-author .avatar {
+	float: right;
+	margin-right: auto;
+	margin-left: 0.875em;
+}
+
+.bypostauthor > article .fn:after {
+	left: auto;
+	right: 3px;
+}
+
+.comment-content ul,
+.comment-content ol {
+	margin: 0 1.25em 1.5em 0;
+}
+
+.comment-reply-title small a {
+	float: left;
+}
+
+
+/*--------------------------------------------------------------
+# Modules
+--------------------------------------------------------------*/
+
+.recent-blog-content-wrapper {
+	text-align: right;
+}
+
+
+/*--------------------------------------------------------------
+## Testimonial Section & Clients Section
+--------------------------------------------------------------*/
+
+#testimonial-section .cycle-prev .icon {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+#testimonial-section .cycle-next .icon {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+/*--------------------------------------------------------------
+## Stat Section & Contact Section
+--------------------------------------------------------------*/
+
+#contact-section {
+	text-align: right;
+}
+
+.contact-icon {
+	float: right;
+}
+
+.contact-icon .icon {
+	margin-right: auto;
+	margin-left: 15px;
+}
+
+
+/*--------------------------------------------------------------
+## >= 640px
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 40em) {
+	#skill-section .skill-content-wrapper.layout-two {
+		text-align: right;
+	}
+
+	#hero-section .post-thumbnail {
+	    left: 0;
+	    right: auto;
+	}
+
+	#hero-section .entry-container {
+		float: right;
+		text-align: right;
+		padding: 40px 0 40px 40px;
+	}
+
+	#hero-section.content-align-right .entry-container {
+		float: left;
+		padding: 40px 40px 40px 0;
+	}
+
+	#hero-section.content-align-right .post-thumbnail {
+		left: auto;
+		right: 0;
+	}	
+
+	.social-top .menu-social-container {
+		padding: 18px 20px 18px 0;
+	}
+
+	.menu-toggle-wrapper {
+		float: right;
+	}
+}
+
+
+/*--------------------------------------------------------------
+## >= 1024px
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 64em) {
+	.navigation-classic #primary-menu-wrapper {
+		float: right;
+	}
+
+	.navigation-classic #social-search-wrapper {
+		float: left;
+	}
+
+	.navigation-classic .main-navigation .icon {
+	    margin-right: 7px;
+	    margin-left: auto;
+	}
+
+	.navigation-classic .main-navigation ul li:hover > ul, 
+	.navigation-classic .main-navigation ul li.focus > ul {
+		left: auto;
+	}
+
+	.navigation-classic .main-navigation ul ul .menu-item-has-children > a > .icon, 
+	.navigation-classic .main-navigation ul ul .page_item_has_children > a > .icon {
+		left: 15px;
+		right: auto;
+	}
+
+	.navigation-classic .main-navigation ul ul li:hover > ul, 
+	.navigation-classic .main-navigation ul ul li.focus > ul {
+		left: auto;
+		right: 100%;
+	}
+
+	.navigation-classic .main-navigation .menu-item-has-children > a > .icon, 
+	.navigation-classic .main-navigation .page_item_has_children > a > .icon {
+		left: auto;
+		right: 5px;
+	}
+
+	#social-search-wrapper > .social-navigation .menu-social-container {
+		padding: 25px 20px 25px 0;
+	}
+
+	#hero-section .entry-container {
+		padding: 60px 0 60px 40px;
+	}
+
+	#hero-section.content-align-right .entry-container {
+		padding: 60px 40px 60px 0;
+	}
+
+	.services-content-wrapper.layout-two .post-thumbnail {
+		margin-left: 40px;
+		margin-right: auto;
+		float: right;
+	}
+
+	.services-content-wrapper.layout-two .entry-container {
+		text-align: right;
+	}
+}
+
+
+/*--------------------------------------------------------------
+## >= 1366px
+--------------------------------------------------------------*/
+@media screen and (min-width: 85.375em) {
+	.services-content-wrapper.layout-three .post-thumbnail {
+		margin-left: 40px;
+		margin-right: auto;
+		float: right;
+	}
+
+	.services-content-wrapper.layout-three .entry-container {
+		text-align: right;
+	}
+
+	.testimonial-content-wrapper .post-thumbnail {
+	    margin-left: 30px;
+	    margin-right: auto;
+	}
+
+	#testimonial-section .has-post-thumbnail .hentry-inner-header-wrap {
+		text-align: right;	
+	}
+}
+
+
+/*--------------------------------------------------------------
+## >= 1600px
+--------------------------------------------------------------*/ 
+
+@media screen and (min-width: 100em) { 
+	#hero-section .entry-container {
+		padding: 80px 0 80px 40px;
+	}
+
+	#hero-section.content-align-right .entry-container {
+		padding: 80px 40px 80px 0;
+	}
+
+	.services-content-wrapper.layout-four .post-thumbnail {
+		margin-left: 40px;
+		margin-right: auto;
+		float: right;
+	}
+
+	.services-content-wrapper.layout-four .entry-container {
+		text-align: right;
+	}
+}

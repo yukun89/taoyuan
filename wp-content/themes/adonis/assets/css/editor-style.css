@@ -1,0 +1,1104 @@
+/*
+Theme Name: Adonis
+Theme URI: https://catchthemes.com/themes/adonis
+Author: Catch Themes
+Author URI: https://catchthemes.com/
+Description: Description
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: adonis
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Adonis is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# Body
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+# Alignments
+# Content
+# Padding/Margin
+# Content
+	## Posts and pages
+# Media
+	## Captions
+	## Galleries
+# Modules
+	## Stat Section & Contact Section
+	## Portfolio Section
+	## Testimonial Section & Clients Section
+	## Hero Content 
+	## Archive Post Wrap 
+	## Singular Content Wrap	
+# Footer
+# Extra Elements
+# Media Queries
+	## >= 640px
+	## >= 1024px
+	## >= 1366px
+	## >= 1600px
+# Colors	
+# RTL	
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+
+body {
+	margin: 30px;
+	max-width: 1070px;
+	vertical-align: baseline;
+}
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.75;
+}
+
+blockquote {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+button, 
+.button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"],
+.wp-caption .wp-caption-text {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-weight: 600;
+	line-height: 1.4;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+}
+
+p {
+	margin: 0 0 1.75em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	font-weight: 600;
+	margin: 0 0 1.4736842105em;
+	overflow: hidden;
+	padding: 0 0 0 55px;
+}
+
+blockquote:before {
+	content: "\201C";
+	display: block;
+	font-family: Georgia;
+	font-size: 64px;
+	font-size: 4rem;
+	height: 0;
+	left: -55px;
+	position: relative;
+	top: -20px;
+}
+
+blockquote p {
+	margin: 0 0 1em;
+}
+
+blockquote cite,
+blockquote small {
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.75;
+}
+
+blockquote cite:before,
+blockquote small:before {
+	content: "\2014\00a0";
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote strong,
+blockquote b {
+	font-weight: 400;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
+}
+
+blockquote.alignleft, 
+blockquote.alignright {
+    width: -webkit-calc(50% - 0.736842105em);
+    width: calc(50% - 0.736842105em);
+}
+
+address {
+	font-style: italic;
+	margin: 0 0 1.75em;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+	font-family: Inconsolata, monospace;
+}
+
+pre {
+	line-height: 1.3125;
+	margin: 0 0 1.75em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.75em;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+code,
+mark,
+ins {
+	padding: 0.125em 0.25em;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	margin-bottom: 1.75em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.75em 1.25em;
+	padding: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 1.5em;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 0 1.75em;
+}
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin: 0 1.5em 1.75em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+	vertical-align: middle;
+}
+
+del {
+	opacity: 0.8;
+}
+
+table,
+.mce-item-table,
+caption,
+.mce-item-table caption,
+th,
+.mce-item-table th, 
+td,
+.mce-item-table td {
+    border: 1px solid;
+}
+
+table,
+.mce-item-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0 0 1.75em;
+    table-layout: fixed;
+    /* Prevents HTML tables from becoming too wide */
+    width: 100%;
+}
+
+caption,
+.mce-item-table caption {
+    border-width: 1px 1px 0 1px;
+    font-weight: 600;
+    text-align: center;
+}
+
+th,
+.mce-item-table th, 
+td,
+.mce-item-table td  {
+    font-weight: normal;
+    text-align: left;
+}
+
+thead th {
+	text-align: center;
+}
+
+th,
+.mce-item-table th {
+    border-width: 0 1px 1px 0;
+}
+
+td,
+.mce-item-table td {
+    border-width: 0 1px 1px 0;
+}
+
+caption,
+th,
+td {
+    padding: 0.833em;
+}
+
+.displaynone {
+	display: none;
+}
+
+.displayblock {
+	display: block;
+}
+
+.cover-link {
+	display: block;
+	height: 100%;
+}
+
+.drop-cap:first-letter {
+  	float: left;
+  	font-size: 100px;
+  	font-size: 6.25rem;
+  	line-height: 0.6;
+  	margin: 8px 16px -15px -3px;
+}
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+input {
+	line-height: normal;
+}
+
+button,
+button[disabled]:hover,
+button[disabled]:focus,
+.button,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus {
+	background-color: transparent;
+	border: none;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	line-height: 1;
+	padding: 17px 40px;
+	text-transform: uppercase;
+	-moz-transition:    all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition:         all 0.2s ease-in-out;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+	outline: thin dotted;
+	outline-offset: -4px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+	background-color: transparent;
+	border: 1px solid;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 11px 13px;
+	width: 100%;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+	background-color: transparent;
+	outline: 0;
+}
+
+.post-password-form {
+	margin-bottom: 1.75em;
+}
+
+.post-password-form label {
+	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	letter-spacing: 0.076923077em;
+	line-height: 1.6153846154;
+	margin-bottom: 1.75em;
+	text-transform: uppercase;
+}
+
+.post-password-form input[type="password"] {
+	margin-top: 0.4375em;
+}
+
+.post-password-form > :last-child {
+	margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover,
+a:focus,
+a:active {
+	outline: none;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+	float: left;
+	margin: 0.375em 1.75em 1.75em 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0.375em 0 1.75em 1.75em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto 1.75em;
+}
+
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+h1,
+.mce-content-body h1 {
+	font-size: 28px;
+	font-size: 1.75rem;
+	line-height: 1.25;
+	margin-top: 1.289em;
+	margin-bottom: 0.737em;
+}
+
+h2,
+.mce-content-body h2 {
+	font-size: 24px;
+	font-size: 1.5rem;
+	line-height: 1.2173913043;
+	margin-top: 1.750em;
+	margin-bottom: 1em;
+}
+
+h3,
+.mce-content-body h3 {
+	font-size: 22px;
+	font-size: 1.375rem;
+	line-height: 1.346153846153846;
+	margin-top: 1.885em;
+	margin-bottom: 1.077em;
+}
+
+h4,
+.mce-content-body h4 {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+h5,
+.mce-content-body h5 {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+h6,
+.mce-content-body h6 {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+h4,
+.mce-content-body h4,
+h5,
+.mce-content-body h5,
+h6,
+.mce-content-body h6 {
+	line-height: 1.3125;
+	margin-top: 2.227em;
+	margin-bottom: 1.273em;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0;
+}
+
+.button {
+	display: inline-block;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.75em;
+}
+
+.page-links a,
+.page-links > span {
+	border: 1px solid;
+	border-radius: 3px;
+	display: inline-block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	height: 1.8461538462em;
+	line-height: 1.6923076923em;
+	margin-right: 0.3076923077em;
+	text-align: center;
+	width: 1.8461538462em;
+}
+
+.page-links > .page-links-title {
+	border: 0;
+	height: auto;
+	margin: 0;
+	padding-right: 0.6153846154em;
+	width: auto;
+}
+
+.entry-attachment {
+	margin-bottom: 1.75em;
+}
+
+.entry-caption {
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 1.0769230769em;
+}
+
+.entry-caption > :last-child {
+	margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+.avatar {
+	border-radius: 50%;
+}
+
+.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+a img {
+	display: block;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+	margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+
+.wp-caption {
+	font-style: italic;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+	padding: 10px 0;
+}
+
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+
+.gallery {
+	margin: 0 -1.1666667% 1.75em;
+}
+
+.gallery-item {
+	display: inline-block;
+	margin: 0;
+	max-width: 33.33%;
+	padding: 0 1.1400652% 2.2801304%;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-1 .gallery-item {
+	max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-icon img {
+	margin: 0 auto;
+}
+
+.gallery-caption {
+	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 0.5384615385em;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
+
+/*--------------------------------------------------------------
+## Stat Section & Contact Section
+--------------------------------------------------------------*/
+
+.contact-item {
+	margin-bottom: 30px;
+}
+
+.contact-item > :last-child {
+	margin-bottom: 0;
+}
+
+#contact-section {
+	text-align: left;
+}
+
+.contact-icon {
+	float: left;
+}
+
+.contact-icon .icon {
+	margin-right: 15px;
+}
+
+
+/*--------------------------------------------------------------
+## >= 768px
+--------------------------------------------------------------*/ 
+
+@media screen and (min-width: 48em) {
+	.entry-content blockquote.alignleft,
+	.entry-content blockquote.alignright {
+	    width: -webkit-calc(50% - 0.736842105em);
+	    width: calc(50% - 0.736842105em);
+	}
+}
+
+
+/*--------------------------------------------------------------
+## >= 1024px
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 64em) {
+	body,
+	input,
+	select,
+	textarea {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	h1,
+	.mce-content-body h1 {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+
+	h2,
+	.mce-content-body h2 {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+
+	h3,
+	.mce-content-body h3 {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	h4,
+	blockquote,
+	.mce-content-body h4 {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+
+	h5,
+	.mce-content-body h5 {
+		font-size: 20px;
+		font-size: 1.375rem;
+	}
+
+	h6,
+	.mce-content-body h6 {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+
+/*--------------------------------------------------------------
+## >= 1366px
+--------------------------------------------------------------*/
+@media screen and (min-width: 85.375em) {
+	.drop-cap:first-letter {
+	  	font-size: 114px;
+	  	font-size: 7.125rem;
+	  	margin: 10px 16px -20px -3px;
+	}	
+
+	h1,
+	.mce-content-body h1 {
+		font-size: 38px;
+		font-size: 2.375rem;
+	}
+
+	h2,
+	.mce-content-body h2 {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	h3,
+	.mce-content-body h3 {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+}	
+
+
+/*--------------------------------------------------------------
+## >= 1600px
+--------------------------------------------------------------*/ 
+
+@media screen and (min-width: 100em) {
+	.drop-cap:first-letter {
+	  	font-size: 122px;
+	  	font-size: 7.625rem;
+	  	margin: 12px 16px -20px -3px;
+	}	
+
+	caption, 
+	th, 
+	td {
+	    padding: 1em;
+	}
+}
+
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+
+/* Secondary Background Color */
+pre,
+hr {
+	background-color: #f7f7f7;
+}
+
+/* Main Text Color */
+body,
+input,
+select,
+optgroup,
+blockquote:before {
+	color: #333;
+}
+
+/* ( Main Text Color 75% ) */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: rgba( 51, 51, 51, 0.75 );
+}
+
+/* Button Text Color */
+button,
+button:hover,
+button:focus,
+button[disabled]:hover,
+button[disabled]:focus,
+.button,
+.button:hover,
+.button:focus,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	color: #fff;
+}/* Button Hover Text Color is Same as button text color */
+
+/* Button Background Color */
+button,
+button[disabled]:hover,
+button[disabled]:focus,
+.button,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus {
+	background-color: #1982c4;
+}
+
+/* Button Hover Background Color */
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background-color: #000;
+}
+
+/* Link Color */
+a {
+	color: #1982c4;
+}
+
+/* Input Focus Color */
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+.page-links > span,
+.page-links a:hover,
+.page-links a:focus {
+	border-color: #1982c4;
+}
+
+/* Link Hover Color */
+a:hover,
+a:focus,
+a:active {
+	color: #000;
+}
+
+/* Border Color */
+table,
+caption,
+th,
+td,
+.page-links a,
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+	border-color: #e5e5e5;
+}
+
+/*--------------------------------------------------------------
+# RTL
+--------------------------------------------------------------*/
+
+.rtl .drop-cap::first-letter {
+    float: right;
+    margin: 10px -3px -20px 16px;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+.rtl blockquote {
+	padding: 0 55px 0 0;
+}
+
+.rtl blockquote:before {
+	float: right;
+	right: -55px;
+	left: auto;
+}
+
+.rtl ul,
+.rtl ol {
+	margin: 0 1.5em 1.75em 0;
+}
+
+.rtl li > ul, 
+.rtl li > ol {
+    margin-bottom: 0;
+}
+
+.rtl th, 
+.rtl .mce-item-table th, 
+.rtl td, 
+.rtl .mce-item-table td {
+	text-align: right;
+}
