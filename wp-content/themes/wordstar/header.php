@@ -54,12 +54,14 @@
   <div class="site-header-main">
     <div class="wrapper">
       <?php wordstar_the_custom_logo();  ?>
+<!-- delete the search box
       <div class="search-form-wrap">
         <button id="search-toggle" class="search-toggle"><i class="fa fa-search"></i><span>
         <?php esc_html_e('Search', 'wordstar'); ?>
         </span></button>
         <?php get_search_form();?>
       </div>
+-->
       <div id="site-header-menu" class="site-header-menu">
         <button id="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i><span>
         <?php esc_html_e('Menu', 'wordstar'); ?>
