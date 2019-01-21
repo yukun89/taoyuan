@@ -188,9 +188,13 @@ pre {
 	word-wrap: break-word;
 }
 code {
-	background-color: #d1d1d1;
 	padding: 0.125em 0.25em;
 }
+
+.code-toolbar pre {
+	background-color: #1a1a1a;
+}
+
 abbr, acronym {
 	border-bottom: 1px dotted #d1d1d1;
 	cursor: help;
@@ -1115,7 +1119,7 @@ textarea {
 	margin: 0 auto;
 }
 #masthead {
-	background-color: #fff;
+	background-color: #f7f7f7;
 	background-position: center;
 	background-repeat: no-repeat;
 	margin-bottom: 30px;
@@ -1400,7 +1404,7 @@ section.no-results .page-header .page-title { margin:0px !important }
 	border-bottom: solid 1px #EAEAEA;
 }
 #main .hentry.post-content .entry-title a {
-	color: #222;
+	color: #a61c00;
 	text-decoration: none !important;
 }
 #main .hentry.post-content .entry-content, #main .hentry.post-content .entry-summary {
