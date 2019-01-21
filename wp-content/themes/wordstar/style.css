@@ -328,10 +328,13 @@ th, td { padding: 0.4375em; }
  */
 
 a {
-	color: #007acc;
+	color: #707070;
 	text-decoration: none;
 }
-a:hover, a:focus, a:active { color: #D13210; }
+a:hover, a:focus, a:active { 
+	color: #D13210;
+	font-weight: bold;
+}
 a:focus { outline: none; }
 a:hover, a:active { outline: 0; }
 .entry-content a:hover, .entry-content a:focus, .entry-summary a:hover, .entry-summary a:focus, .taxonomy-description a:hover, .taxonomy-description a:focus, .logged-in-as a:hover, .logged-in-as a:focus, .comment-content a:hover, .comment-content a:focus, .pingback .comment-body > a:hover, .pingback .comment-body > a:focus, .textwidget a:hover, .textwidget a:focus { box-shadow: none; }
@@ -544,8 +547,8 @@ blockquote.aligncenter { margin-bottom: 1.473684211em; }
 	font-size: 12px !important;
 }
 .tagcloud a:hover, .tagcloud a:focus {
-	border-color: #007acc;
-	background: #007acc;
+	border-color: #d1d1d1;
+	background: #707070;
 	color: #fff;
 	outline: 0;
 }
@@ -1076,13 +1079,15 @@ p > embed, p > iframe, p > object, p > video { margin-bottom: 0; }
 	padding: 8px;
 }
 .button, button, input[type="submit"], input[type="reset"], .comment-form input.submit, .comment-reply-link {
-	background: #0f8bda;
+	background: #707070;
 	color: #fff !important;
 	border: none;
 	outline: none;
 	padding: 10px 15px;
 }
-.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, .comment-form input.submit:hover, .comment-reply-link:hover { background: #38a4e8; }
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, .comment-form input.submit:hover, .comment-reply-link:hover { 
+	background: #d1d1d1; 
+}
 input, select, textarea { }
 input[type="radio"], input[type="checkbox"] {
 	padding: none;
@@ -1387,7 +1392,7 @@ section.no-results .page-header .page-title { margin:0px !important }
 	height: auto;
 }
 #main .hentry.post-content .entry-title {
-	font-size: 28px;
+	font-size: 20px;
 	line-height: 40px;
 	padding: 20px 25px 12px;
 	margin: 0;
@@ -1412,11 +1417,11 @@ section.no-results .page-header .page-title { margin:0px !important }
 #main .hentry.post-content .entry-summary p { margin: 0; }
 #main .hentry.post-content .entry-summary p a.read-more {
 	display: block;
-	padding: 10px 20px;
+	padding: 5px 10px;
 	border: 1px solid;
-	width: 195px;
+	width: 110px;
 	text-align: center;
-	margin: 25px 0 0;
+	margin: 20px 0 0;
 	text-decoration: none !important;
 	font-weight: normal;
 }
@@ -1626,7 +1631,7 @@ li.comment .comment-respond {
 	font: normal normal normal 6px/1 FontAwesome;
 }
 .site-footer ul.footer-nav li:last-child:after { display: none; }
-.site-footer ul.footer-nav li a { color: #007acc; }
+.site-footer ul.footer-nav li a { color: #707070; }
 .site-footer ul.footer-nav li a:hover { text-decoration: underline; }
 .site-footer .footer-copy {
 	text-align: center;
