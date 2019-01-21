@@ -188,9 +188,13 @@ pre {
 	word-wrap: break-word;
 }
 code {
-	background-color: #d1d1d1;
 	padding: 0.125em 0.25em;
 }
+
+.code-toolbar pre {
+	background-color: #1a1a1a;
+}
+
 abbr, acronym {
 	border-bottom: 1px dotted #d1d1d1;
 	cursor: help;
