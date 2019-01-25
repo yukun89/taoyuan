@@ -277,11 +277,11 @@ if ( ! function_exists( 'pvc_post_views' ) ) {
 		$icon = apply_filters( 'pvc_post_views_icon', '<span class="post-views-icon ' . $icon_class . '"></span>', $post_id );
 
 		$html = apply_filters(
-			'pvc_post_views_html', '<div class="post-views post-' . $post_id . ' entry-meta">
+			'pvc_post_views_html', '<li class="mpost-views mpost-' . $post_id . ' mentry-meta">
 			' . ($options['display_style']['icon'] && $icon_class !== '' ? $icon : '') . '
 			' . ($options['display_style']['text'] ? '<span class="post-views-label">' . $label . ' </span>' : '') . '
 			<span class="post-views-count">' . number_format_i18n( $views ) . '</span>
-			</div>', $post_id, $views, $label, $icon
+			</li>', $post_id, $views, $label, $icon
 		);
 
 		if ( $echo )
