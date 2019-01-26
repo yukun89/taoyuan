@@ -263,12 +263,13 @@ function wordstar_entry_meta()
     if (! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo '<li class="comment">
 				<i class="fa fa-comments"></i>';
-        comments_popup_link(__('评论', 'wordstar').'<span class="screen-reader-text">:&nbsp;'.get_the_title().'</span>');
+        comments_popup_link(__('Leave a comment', 'wordstar').'<span class="screen-reader-text">:&nbsp;'.get_the_title().'</span>');
         echo '</li>';
     }
     
     // Edit Link ---->
     edit_post_link(__('Edit', 'wordstar'), '<li class="edit-link"><i class="fa fa-pencil"></i>', '</li>'); 
+    pvc_post_views(); 
     echo '<div class="clear"></div></ul>';
 }
     
@@ -325,7 +326,7 @@ function wordstar_excerpt_more( $more )
 {
     if(! is_admin()) {
         /* translators: %s: Name of current post */
-        $link = sprintf('<a href="%1$s" class="more-link read-more" rel="bookmark">%2$s</a>', esc_url(get_permalink(get_the_ID())), sprintf(__('阅读全文 %s', 'wordstar'), '<span class="screen-reader-text">'.get_the_title(get_the_ID()).'</span><i class="fa fa-arrow-right"></i>'));
+        $link = sprintf('<a href="%1$s" class="more-link read-more" rel="bookmark">%2$s</a>', esc_url(get_permalink(get_the_ID())), sprintf(__('Continue Reading %s', 'wordstar'), '<span class="screen-reader-text">'.get_the_title(get_the_ID()).'</span><i class="fa fa-arrow-right"></i>'));
         return '&hellip; ' . $link;
     }
 }
