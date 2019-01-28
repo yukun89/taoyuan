@@ -321,7 +321,7 @@ function wordstar_post_thumbnail($size='')
 
 
 // Excerpt more --------------->
-add_filter('excerpt_more', 'wordstar_excerpt_more');
+/* add_filter('excerpt_more', 'wordstar_excerpt_more'); */
 function wordstar_excerpt_more( $more ) 
 {
     if(! is_admin()) {
