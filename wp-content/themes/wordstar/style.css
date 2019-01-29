@@ -173,7 +173,9 @@ address {
 	font-style: italic;
 	margin: 0 0 10px;
 }
-code, kbd, tt, var, samp, pre { font-family: Inconsolata, monospace; }
+code, kbd, tt, var, samp, pre { 
+	font-family: Inconsolata, monospace; 
+}
 pre {
 	border: 1px solid #d1d1d1;
 	font-size: 16px;

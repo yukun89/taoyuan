@@ -321,23 +321,53 @@ function wordstar_post_thumbnail($size='')
 
 
 // Excerpt more --------------->
-/* add_filter('excerpt_more', 'wordstar_excerpt_more'); */
+add_filter('excerpt_more', 'wordstar_excerpt_more');
 function wordstar_excerpt_more( $more ) 
 {
     if(! is_admin()) {
         /* translators: %s: Name of current post */
-        $link = sprintf('<a href="%1$s" class="more-link read-more" rel="bookmark">%2$s</a>', esc_url(get_permalink(get_the_ID())), sprintf(__('Continue Reading %s', 'wordstar'), '<span class="screen-reader-text">'.get_the_title(get_the_ID()).'</span><i class="fa fa-arrow-right"></i>'));
+		/*$link = sprintf('<a href="%1$s" class="more-link read-more" rel="bookmark">%2$s</a>', esc_url(get_permalink(get_the_ID())), sprintf(__('Continue Reading %s', 'wordstar'), '<span class="screen-reader-text">'.get_the_title(get_the_ID()).'</span><i class="fa fa-arrow-right"></i>'));*/
+		/* return '&hellip; ' . $link; */
+		$link = sprintf('<a href="%1$s" class="" rel="bookmark">%2$s</a>', esc_url(get_permalink(get_the_ID())), sprintf(__('阅读全文 »'), '<span class="screen-reader-text">'.get_the_title(get_the_ID()).'</span><i class="fa fa-arrow-right"></i>'));
         return '&hellip; ' . $link;
+		/* return '&hellip; <a href="' . get_the_permalink() . '">阅读全文 »</a>'; */
     }
 }
 
 // Excerpt character length --------------->
-    add_filter('excerpt_length', 'wordstar_custom_excerpt_length', 999);
+add_filter('excerpt_length', 'wordstar_custom_excerpt_length', 999);
 function wordstar_custom_excerpt_length( $length ) 
 {
-    return 50;
+    return 100;
 }
 
+// Excerpt content replace --------------->
+add_filter( 'get_the_excerpt', 'iesay_make_excerpt_text_interesting', 999 );
+function iesay_make_excerpt_text_interesting( $excerpt ) {
+  if ( is_admin() ) {
+    return $excerpt;
+  }
+  $excerpt = str_replace( array('...'), '', $excerpt );
+  return $excerpt;
+}
+
+// Excerpt content : using the first p--------------->
+// Leave priority at default of 10 to allow further filtering
+add_filter( 'wp_trim_excerpt', 'iesay_excerpt', 10, 1 );
+function iesay_excerpt( $text ) {
+  if( is_admin() ) {
+    return $text;
+  }
+  // Fetch the content with filters applied to get <p> tags
+  $content = apply_filters( 'the_content', get_the_content() );
+  // Stop after the first </p> tag
+	if( strpos($content, '<!--readmore-->') > 0) {
+		$text = substr( $content, 0, strpos( $content, '<!--readmore-->' ) + 15 );
+	} else {
+ 		$text = substr( $content, 0, strpos( $content, '</p>' ) + 4 );
+	}
+  return $text;
+}
 
 // home page validation --------------->
 function wordstar_is_home_page(){
