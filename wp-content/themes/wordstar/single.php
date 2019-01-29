@@ -62,6 +62,7 @@
     }
     ?>
     <div class="clear"></div>
+	<!-- delete author-info
     <div class="author-info byline author p-author vcard hcard h-card author-<?php echo esc_attr(get_the_author_meta('ID'));?>" itemprop="author " itemscope itemtype="http://schema.org/Person">
       <div class="author-avatar"> <?php echo get_avatar(get_the_author_meta('user_email'), apply_filters('wordstar_author_bio_avatar_size', 70));?> </div>
       <div class="author-description">
@@ -75,6 +76,7 @@
       </div>
       <div class="clear"></div>
     </div>
+	-->
     </article>
     <?php	endwhile; ?>
      <?php if (comments_open() || get_comments_number() ) {comments_template();}?>

@@ -263,12 +263,14 @@ function wordstar_entry_meta()
     if (! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo '<li class="comment">
 				<i class="fa fa-comments"></i>';
-        comments_popup_link(__('Leave a comment', 'wordstar').'<span class="screen-reader-text">:&nbsp;'.get_the_title().'</span>');
+        comments_popup_link(__('评论', 'wordstar').'<span class="screen-reader-text">:&nbsp;'.get_the_title().'</span>');
         echo '</li>';
     }
     
     // Edit Link ---->
-    edit_post_link(__('Edit', 'wordstar'), '<li class="edit-link"><i class="fa fa-pencil"></i>', '</li>'); 
+    edit_post_link(__('编辑', 'wordstar'), '<li class="edit-link"><i class="fa fa-pencil"></i>', '</li>'); 
+
+	// Post views ---->
     pvc_post_views(); 
     echo '<div class="clear"></div></ul>';
 }
