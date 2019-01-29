@@ -51,10 +51,10 @@
         // Previous/next post navigation.
         the_post_navigation(
             array(
-            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'wordstar') . '</span> ' .
+            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('下一篇', 'wordstar') . '</span> ' .
             '<span class="screen-reader-text">' . __('Next post:', 'wordstar') . '</span> ' .
             '<span class="post-title">%title</span>',
-            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'wordstar') . '</span> ' .
+            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('上一篇', 'wordstar') . '</span> ' .
             '<span class="screen-reader-text">' . __('Previous post:', 'wordstar') . '</span> ' .
             '<span class="post-title">%title</span>',
             ) 
