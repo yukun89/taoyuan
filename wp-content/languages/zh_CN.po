@@ -9248,13 +9248,13 @@ msgstr "链接文本"
 #. translators: %s: post title
 #: wp-includes/comment-template.php:1513
 msgid "1 Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "<span class=\"screen-reader-text\">%s</span>有1条评论"
+msgstr "<span class=\"screen-reader-text\">%s</span>1条评论"
 
 #. translators: 1: Number of comments 2: post title
 #: wp-includes/comment-template.php:1518
 msgid "%1$s Comment<span class=\"screen-reader-text\"> on %2$s</span>"
 msgid_plural "%1$s Comments<span class=\"screen-reader-text\"> on %2$s</span>"
-msgstr[0] "<span class=\"screen-reader-text\">%2$s</span>有%1$s条评论"
+msgstr[0] "<span class=\"screen-reader-text\">%2$s</span>%1$s条评论"
 
 #. translators: %s: post title
 #: wp-includes/comment-template.php:1524

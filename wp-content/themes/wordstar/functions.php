@@ -36,8 +36,10 @@ function wordstar_setup()
 		 array(
 			'width'        => 1600,
 			'height'        => 100,
+			'flex-width' => true,//自适应高度
+			'flex-width' => true,//自适应宽度
 			'header-text' => true,
-			'default-text-color'     => '1b52a7',
+			'default-text-color'     => '4096ae',
         )
     );
     add_theme_support( "custom-background", 
