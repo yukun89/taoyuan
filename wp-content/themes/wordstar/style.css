@@ -1402,7 +1402,7 @@ section.no-results .page-header .page-title { margin:0px !important }
 	line-height: 40px;
 	padding: 20px 25px 12px;
 	margin: 0;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	border-bottom: solid 1px #EAEAEA;
 }
 #main .hentry.post-content .entry-title a {
