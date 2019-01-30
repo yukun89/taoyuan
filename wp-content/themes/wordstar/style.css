@@ -1121,7 +1121,8 @@ textarea {
 	margin: 0 auto;
 }
 #masthead {
-	background-color: #f7f7f7;
+	/*设置banner背景色*/
+	background-color: #ffffff;
 	background-position: center;
 	background-repeat: no-repeat;
 	margin-bottom: 30px;
@@ -1132,24 +1133,36 @@ textarea {
 }
 #masthead .site-branding {
 	float: left;
-	margin-right: 20px;
-	margin-top: 4px;
-	height: 30px;
+	/* margin: 0 auto !important; */
+	/* margin-top: 4px; */
+	height: 60px;
 }
-#masthead .site-branding.logo-active { max-width: 140px; }
-#masthead .site-branding h1, #masthead .site-branding p.site-title {
-	font-size: 22px;
+#masthead .site-branding.logo-active {
+	max-width: 140px; 
+}
+
+#masthead .site-branding h1, #masthead .site-branding p.site-title{
+	font-size: 28px;
 	line-height: 25px;
-	text-transform: uppercase;
 	font-weight: bold;
-	margin-top: 2px;
+	text-align: center;
 }
-#masthead .site-branding p { font-size: 14px; }
+
+#masthead .site-branding h2 {
+	font-size: 16px;
+	line-height: 25px;
+	text-align: center;
+}
+
+#masthead .site-branding p {
+	font-size: 14px;
+}
 #masthead .site-branding a {
 	color: #1b52a7;
 	text-decoration: none !important;
 }
-#masthead .site-branding a:hover { }
+#masthead .site-branding a:hover {
+}
 #masthead .site-branding img.logo, #masthead .site-branding img {
 	max-height: 36px !important;
 	width: auto !important;

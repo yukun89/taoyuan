@@ -408,7 +408,8 @@ function wordstar_the_custom_logo()
         if(!is_customize_preview()) {
             $class="says";
         }
-        echo '<p  id="site-description" class="site-description p-summary e-content '.esc_attr($class).'" itemprop="description">'.esc_html($description).'</p>';
+        $class="";
+        echo '<h2  id="site-description" class="site-description p-summary e-content '.esc_attr($class).'" itemprop="description">'.esc_html($description).'</h2>';
     }
       echo '</div>';
 }
