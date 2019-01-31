@@ -355,18 +355,21 @@ function iesay_make_excerpt_text_interesting( $excerpt ) {
 
 // Excerpt content : using the first p--------------->
 // Leave priority at default of 10 to allow further filtering
-add_filter( 'wp_trim_excerpt', 'iesay_excerpt', 10, 1 );
-function iesay_excerpt( $text ) {
+add_filter( 'wp_trim_excerpt', 'wordstar_trim_excerpt', 10, 1 );
+function wordstar_trim_excerpt( $text ) {
   if( is_admin() ) {
     return $text;
   }
-  // Fetch the content with filters applied to get <p> tags
+  $link = sprintf('<div style="text-align:center;"> <a href="%1$s" class="more-link" rel="bookmark">%2$s</a> </div>', esc_url(get_permalink(get_the_ID())), sprintf(__('阅读全文'), get_the_title(get_the_ID())));
+  // Fetch the content with filters applied to get <!--readmore--> tags
   $content = apply_filters( 'the_content', get_the_content() );
-  // Stop after the first </p> tag
+  // Stop after the first <!--readmore--> tag
 	if( strpos($content, '<!--readmore-->') > 0) {
-		$text = substr( $content, 0, strpos( $content, '<!--readmore-->' ) + 15 );
+		$text = substr( $content, 0, strpos( $content, '<!--readmore-->' )  );
+        $text = $text . '&hellip;<br> ' . $link;
 	} else {
  		$text = substr( $content, 0, strpos( $content, '</p>' ) + 4 );
+        $text = $text . '&hellip;<br> ' . $link;
 	}
   return $text;
 }
