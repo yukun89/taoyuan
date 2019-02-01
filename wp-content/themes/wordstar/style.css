@@ -1122,18 +1122,27 @@ textarea {
 }
 #masthead {
 	/*设置banner背景色*/
-	background-color: #ffffff;
 	background-position: center;
 	background-repeat: no-repeat;
 	margin-bottom: 30px;
 }
+
+#first-top {
+    /* position: fixed; */
+    /* right: 0; */
+	background-color: #ffffff;
+	padding: 10px;
+	border-bottom: 1px solid #E5E5E5;
+}
+
 #masthead .site-header-main, #masthead .site-header-sub {
+	background-color: #ffffff;
 	padding: 10px;
 	border-bottom: 1px solid #E5E5E5;
 }
 #masthead .site-branding {
-	float: left;
-	/* margin: 0 auto !important; */
+	/* float: left; */
+	margin: 0 auto !important;
 	/* margin-top: 4px; */
 	height: 60px;
 }

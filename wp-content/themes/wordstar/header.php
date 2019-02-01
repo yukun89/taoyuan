@@ -51,14 +51,12 @@
 <?php esc_html_e('Skip to content', 'wordstar'); ?>
 </a>
 <header id="masthead" class="site-header" role="banner">
-  <div class="site-header-main">
-    <div class="wrapper">
-      <?php wordstar_the_custom_logo();  ?>
+  <div id="first-top" class="site-header-main">
+		<!--导航栏在这里-->
       <div id="site-header-menu" class="site-header-menu">
         <button id="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i><span>
         <?php esc_html_e('Menu', 'wordstar'); ?>
         </span></button>
-		<!--导航栏在这里-->
         <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'wordstar'); ?>">
           <?php if (has_nav_menu('primary')) {
                 wp_nav_menu(
@@ -78,10 +76,15 @@
     ?>
           <div class="clear"></div>
         </nav>
-      </div>
+      </div> <!--site-header-menu-->
+    <div class="clear"></div>
+  </div> <!--first-top-->
+  <div class="site-header-main">
+    <div class="wrapper">
+      <?php wordstar_the_custom_logo();  ?>
       <div class="clear"></div>
-    </div>
-  </div>
+    </div> <!--wrapper-->
+  </div> <!--site-header-main-->
   <div class="clear"></div>
 </header>
 <div id="content" class="site-content wrapper">
