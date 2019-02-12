@@ -400,9 +400,9 @@ function wordstar_the_custom_logo()
     }else{
         echo ' <div class="site-branding">';
         if(wordstar_is_home_page()) {
-            echo '<h1 id="site-title" class="site-title p-name" itemprop="name"><a href="'.esc_url(home_url('/')).'" rel="home" itemprop="url" class="u-url url">'.esc_html(get_bloginfo('name')).'</a></h1>';
+            echo '<span id="site-title" class="site-title p-name" itemprop="name"><a href="'.esc_url(home_url('/')).'" rel="home" itemprop="url" class="u-url url">'.esc_html(get_bloginfo('name')).'</a></span>';
         } else{
-            echo '<p id="site-title" class="site-title p-name" itemprop="name"><a href="'.esc_url(home_url('/')).'" rel="home" itemprop="url" class="u-url url">'.esc_html(get_bloginfo('name')).'</a></p>';
+            echo '<span id="site-title" class="site-title p-name" itemprop="name"><a href="'.esc_url(home_url('/')).'" rel="home" itemprop="url" class="u-url url">'.esc_html(get_bloginfo('name')).'</a></span>';
         }
     }
             
@@ -412,7 +412,7 @@ function wordstar_the_custom_logo()
             $class="says";
         }
         $class="";
-        echo '<h2  id="site-description" class="site-description p-summary e-content '.esc_attr($class).'" itemprop="description">'.esc_html($description).'</h2>';
+        echo '<span  id="site-description" class="site-description p-summary e-content '.esc_attr($class).'" itemprop="description">'.esc_html($description).'</span>';
     }
       echo '</div>';
 }

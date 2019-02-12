@@ -1140,12 +1140,28 @@ textarea {
 	padding: 10px;
 	border-bottom: 1px solid #E5E5E5;
 }
+
 #masthead .site-branding {
-	/* float: left; */
+    float: left;
 	margin: 0 auto !important;
-	/* margin-top: 4px; */
-	height: 60px;
+	padding-top: 5px;
 }
+
+#masthead .site-branding #site-title {
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+#masthead .site-branding #site-title a {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#masthead .site-branding #site-description {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
 #masthead .site-branding.logo-active {
 	max-width: 140px; 
 }
@@ -1213,7 +1229,7 @@ textarea {
 }
 .widget .search-form input.search-field { padding-left: 5px; }
 #masthead .site-header-menu {
-	float: right;
+	// float: right;
 	position: relative;
 }
 #masthead .site-header-menu .menu-toggle, #masthead .search-form-wrap .search-toggle {
@@ -1268,6 +1284,11 @@ textarea {
 	text-transform: uppercase;
 	text-decoration: none !important;
 }
+
+#masthead .site-header-menu li a span {
+    font-size: 14px;
+}
+
 #masthead .site-header-menu li.current_page_item a, #masthead .site-header-menu li.current-menu-item a, #masthead .site-header-menu li.current-post-ancestor a, #masthead .site-header-menu li.current-menu-parent a, #masthead .site-header-menu li.current-post-parent a { color: #003DBD!important }
 #masthead .site-header-menu ul.primary-menu li ul.sub-menu {
 	position: absolute;

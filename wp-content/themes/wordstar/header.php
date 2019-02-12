@@ -52,7 +52,8 @@
 </a>
 <header id="masthead" class="site-header" role="banner">
   <div id="first-top" class="site-header-main">
-		<!--导航栏在这里-->
+      <?php wordstar_the_custom_logo(); ?>
+	  <!--导航栏在这里-->
       <div id="site-header-menu" class="site-header-menu">
         <button id="menu-toggle" class="menu-toggle"><i class="fa fa-bars"></i><span>
         <?php esc_html_e('Menu', 'wordstar'); ?>
@@ -73,18 +74,11 @@
                     )
                 );
             }
-    ?>
+          ?>
           <div class="clear"></div>
         </nav>
       </div> <!--site-header-menu-->
-    <div class="clear"></div>
   </div> <!--first-top-->
-  <div class="site-header-main">
-    <div class="wrapper">
-      <?php wordstar_the_custom_logo();  ?>
-      <div class="clear"></div>
-    </div> <!--wrapper-->
-  </div> <!--site-header-main-->
   <div class="clear"></div>
 </header>
 <div id="content" class="site-content wrapper">
