@@ -55,6 +55,7 @@ define('SECURE_AUTH_SALT', ')j4qSGrKxk&Wh22u!4{gxn;_^8N,^)/bF`v/q?M5{-.hK$>#Q(Yh
 define('LOGGED_IN_SALT',   '&ZS^mMDOU5[`nfFsry8K?(4B-|0aWuf/ nJ0xKIClE;<4^EUX}$7BCd&u!()G(yw');
 define('NONCE_SALT',       ';5wN+X:G;)8T)F6Amdq{[_;je`>K+Gd{@d(QjLn`HFSW*]MC+3+Jw6EuU7w!}YaW');
 define('WPLANG', 'zh_CN');
+define('GADWP_IP_VERSION', 1);
 /**#@-*/
 
 /**

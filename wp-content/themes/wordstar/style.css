@@ -16,6 +16,10 @@
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
+@font-face {
+    font-family: SiYuCongCongCaoShuTi;
+    src: url('fonts/SiYuCongCongCaoShuTi-2.ttf');
+}
 
 html {
 	-webkit-text-size-adjust: 100%;
@@ -1136,7 +1140,7 @@ textarea {
 }
 
 #masthead .site-header-main, #masthead .site-header-sub {
-	background-color: #ffffff;
+	background-color: #263347;
 	padding: 10px;
 	border-bottom: 1px solid #E5E5E5;
 }
@@ -1158,8 +1162,9 @@ textarea {
 }
 
 #masthead .site-branding #site-description {
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 20px;
+    font-family: SiYuCongCongCaoShuTi;
 }
 
 #masthead .site-branding.logo-active {
@@ -1279,7 +1284,7 @@ textarea {
 	padding: 0 0px;
 	margin: 0 10px;
 	font-size: 12px;
-	color: #505050;
+	color: #EFEFEF;
 	height: 33px;
 	text-transform: uppercase;
 	text-decoration: none !important;

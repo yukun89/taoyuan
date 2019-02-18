@@ -32,7 +32,8 @@
 }
  if(get_header_textcolor()) {
  echo ' #masthead .site-branding,#masthead .site-branding a {
-	 	color: #'.esc_attr(get_header_textcolor()).'!important;
+     /* color: #'.esc_attr(get_header_textcolor()).'!important; */
+	 	color: #DFDFDF !important;
 	}';
 }
  if (!display_header_text() ) {
