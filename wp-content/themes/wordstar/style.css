@@ -577,6 +577,7 @@ blockquote.aligncenter { margin-bottom: 1.473684211em; }
 	margin-bottom: 3.5em;
 	position: relative;
 }
+
 .entry-header, .entry-summary, .entry-content, .entry-footer, .page-content, .entry-meta { }
 .entry-title {
 	font-size: 28px;
@@ -1307,7 +1308,7 @@ textarea {
     color: #D0D0D0;
 }
 
-#masthead .site-header-menu li.current_page_item a, #masthead .site-header-menu li.current-menu-item a, #masthead .site-header-menu li.current-post-ancestor a, #masthead .site-header-menu li.current-menu-parent a, #masthead .site-header-menu li.current-post-parent a { color: #003DBD!important }
+#masthead .site-header-menu li.current_page_item a, #masthead .site-header-menu li.current-menu-item a, #masthead .site-header-menu li.current-post-ancestor a, #masthead .site-header-menu li.current-menu-parent a, #masthead .site-header-menu li.current-post-parent a { color: #CCCCCC!important }
 #masthead .site-header-menu ul.primary-menu li ul.sub-menu {
 	position: absolute;
 	left: 0px;
