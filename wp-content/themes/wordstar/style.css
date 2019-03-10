@@ -1121,10 +1121,9 @@ textarea {
 }
 #page, #content { height: auto; }
 .wrapper {
-	max-width: 1200px;
-    margin-top: 80px;
-    margin-left: 80px;
-    margin-bottom: 0px;
+	max-width: 1000px;
+    margin: auto;
+    padding-top: 40px;
 }
 #masthead {
 	/*设置banner背景色*/
@@ -1143,6 +1142,11 @@ textarea {
 	border-bottom: 1px solid #E5E5E5;
 }
 
+#header-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
 #masthead .site-header-main, #masthead .site-header-sub {
 	/* background-color: #203045; */
     background: linear-gradient(#203060, #253550, #203040);
@@ -1157,7 +1161,6 @@ textarea {
 }
 
 #masthead .site-branding #site-title {
-    margin-left: 50px;
     margin-right: 20px;
 }
 
