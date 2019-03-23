@@ -578,6 +578,31 @@ blockquote.aligncenter { margin-bottom: 1.473684211em; }
 	position: relative;
 }
 
+#anchorContentBlock {
+    min-height: 150px;
+    padding-bottom: 20px;
+}
+
+.anchorContent a {
+  color: #999;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.anchorContent a:hover {
+  color: $theme-color1;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+#anchorContentToggle {
+  color: #a61c00;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .entry-header, .entry-summary, .entry-content, .entry-footer, .page-content, .entry-meta { }
 .entry-title {
 	font-size: 28px;

@@ -23,6 +23,10 @@
       <?php wordstar_entry_meta(); ?>
     </div>
     <div class="entry-content e-content" itemprop="description articleBody">
+      <div class="blogAnchor" id="anchorContentBlock">
+        <p id="anchorContentToggle" title="收起">导航[-]</p>
+        <div class="anchorContent" id="anchorContent"> </div>
+      </div>
       <?php
                 /* translators: %s: Name of current post */
                 the_content(sprintf(__('Continue reading %s', 'wordstar'), the_title('<span class="screen-reader-text">', '</span>', false)));

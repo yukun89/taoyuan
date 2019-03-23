@@ -96,6 +96,8 @@ function wordstar_scripts()
         
     if (is_singular() ) { wp_enqueue_script("comment-reply");   }
     wp_enqueue_script('html5shiv', get_template_directory_uri().'/assets/js/html5.js', array( 'jquery' ), null, false);
+    wp_enqueue_script('wordstar-script', get_template_directory_uri() . '/assets/js/blogDirectory.js', array( 'jquery' ), null, true);
+    wp_enqueue_script('wordstar-script', get_template_directory_uri() . '/assets/js/jquery.min.js', array( 'jquery' ), null, true);
     wp_script_add_data('html5shiv', 'conditional', 'lt IE 9');
     wp_enqueue_script('wordstar-script', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), null, true);
 }
