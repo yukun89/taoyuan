@@ -603,6 +603,155 @@ blockquote.aligncenter { margin-bottom: 1.473684211em; }
   font-weight: bold;
 }
 
+.post-reward-area {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Tahoma', 'Arial', 'Microsoft Yahei', 'Hiragino Sans GB', 'PingFang SC', STHeiTi, sans-serif;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.post-reward-area .pointer {
+  color: #999;
+}
+.post-reward-area .post-reward-panel {
+  position: absolute;
+  width: 120px;
+  height: 142px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  left: 50%;
+  z-index: 100;
+  margin-left: -66px;
+  margin-top: -110px;
+  text-align: center;
+  -moz-box-shadow: 1px 2px 10px #888888;
+  box-shadow: 1px 1px 9px #888888;
+  display: none;
+}
+.post-reward-area .post-reward-panel .post-reward-qrcode {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+.post-reward-area .post-reward-panel .post-reward-qrcode-tip {
+  font-size: 14px;
+  color: #272727;
+}
+.post-reward-area .post-reward-panel .arrow-bottom .arror-icon {
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
+  z-index: 99;
+  border-color: #FFFFFF transparent transparent transparent;
+  margin: 0 0 -18px -15px;
+  border-right-width: 15px;
+  border-left-width: 15px;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-style: solid;
+  bottom: 0px;
+}
+.post-reward-area .post-reward-tip-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+.post-reward-area .post-reward-tip-wrapper .post-reward-tip {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.post-reward-area .post-reward-tip-wrapper .post-reward-tip.shadow:hover {
+  background-color: #f0f1f2;
+}
+.post-reward-area .post-reward-tip-wrapper .post-reward-tip .edit-reward-tip {
+  padding-left: 20px;
+  background-position: -40px -2597px;
+}
+.post-reward-area .post-reward-tip-wrapper .input-reward-tip {
+  margin-top: -10px;
+  width: 320px;
+  padding: 0;
+  height: 24px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  border-color: #558fcb;
+  border-radius: 4px;
+}
+.post-reward-area .post-reward-btn {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Tahoma', 'Arial', 'Microsoft Yahei', 'Hiragino Sans GB', 'PingFang SC', STHeiTi, sans-serif;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: #a61c00;
+  font-size: 21px;
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  margin-left: -35px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.post-reward-area .post-reward-btn:active {
+  background: #d44343;
+  outline: none;
+  border: 0px;
+}
+.post-reward-area .post-reward-btn:hover {
+  background: #d44343;
+  outline: none;
+  border: 0px;
+}
+.post-reward-area .post-reward-count {
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #999999;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.post-reward-area .post-reward-users-area {
+  width: 432px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 0;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.post-reward-area .post-reward-users-area .post-reward-avatar {
+  border: 1px solid #F0EFEF;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 10px;
+}
+.reward-vip-icon {
+  padding-left: 20px;
+  height: 20px;
+  background-position: -108px -2596px;
+  top: 32px;
+  left: -14px;
+}
+.reward-vip-icon-small {
+  padding-left: 20px;
+  height: 20px;
+  background-position: -75px -2596px;
+  top: -3px;
+  left: 36px;
+}
+
 .entry-header, .entry-summary, .entry-content, .entry-footer, .page-content, .entry-meta { }
 .entry-title {
 	font-size: 28px;

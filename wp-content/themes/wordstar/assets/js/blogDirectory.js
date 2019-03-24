@@ -29,3 +29,12 @@ jQuery("#anchorContentToggle").click(function(){
 jQuery(".anchor-link").click(function(){
     jQuery("html,body").animate({scrollTop: jQuery(jQuery(this).attr("link")).offset().top}, 400);
 });
+
+jQuery(".post-reward-btn").on("mouseover mouseout",function(event){
+ if(event.type == "mouseover") {
+    jQuery(".post-reward-panel").css("display", "block")
+ } else if (event.type == "mouseout") {
+  //鼠标离开
+    jQuery(".post-reward-panel").css("display", "none")
+ }
+})

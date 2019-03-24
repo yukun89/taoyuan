@@ -40,9 +40,24 @@
                     'separator'   => '<span class="screen-reader-text">, </span>',
                     ) 
                 );
-            ?>
+      ?>
+      <!-- 红包打赏区块 -->
+      <div class="post-reward-area relative">
+        <div class="post-reward-panel absolute hide">
+          <img class="post-reward-qrcode" src="/wp-content/themes/wordstar/assets/images/qrcode.png">
+          <div class="post-reward-qrcode-tip">微信扫一扫赞赏</div>
+            <div class="arrow-bottom">
+              <span class="arror-icon">◆</span>
+            </div>
+          </div>
+          <!-- 是否出现打赏引导与按钮 -->
+          <div class="post-reward-tip-wrapper">
+            <span class="post-reward-tip gray ">如果觉得我的文章对您有用，请随意赞赏</span>
+          </div>
+          <button class="post-reward-btn">赏</button>
+        </div>
+      </div>
       <div class="clear"></div>
-    </div>
     <?php
     if (is_singular('attachment') ) {
         // Parent post navigation.
